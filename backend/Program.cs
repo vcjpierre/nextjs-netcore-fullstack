@@ -12,7 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Configurar CORS para desarrollo con Next.js (ajusta los orígenes según necesites)
+// Configurar CORS para desarrollo con Next.js (ajusta los orï¿½genes segï¿½n necesites)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowNextJS",
@@ -29,7 +29,7 @@ builder.Services.AddSwaggerGen(c =>
     {
         Title = "Product API",
         Version = "v1",
-        Description = "API para gestión de productos"
+        Description = "API para gestiï¿½n de productos"
     });
 });
 
@@ -54,7 +54,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-// Ejecutar migraciones automáticamente (solo para desarrollo)
+// Ejecutar migraciones automaticamente (solo para desarrollo)
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
@@ -66,7 +66,7 @@ using (var scope = app.Services.CreateScope())
     catch (Exception ex)
     {
         var logger = services.GetRequiredService<ILogger<Program>>();
-        logger.LogError(ex, "Error ocurrido durante la migración");
+        logger.LogError(ex, "Error ocurrido durante la migraciï¿½n");
     }
 }
 
