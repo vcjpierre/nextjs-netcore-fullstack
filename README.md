@@ -47,8 +47,12 @@ npm run dev
 Visit <http://localhost:3000> to see the application.
 
 ## Docker Support
-The backend includes Docker configuration for containerization:
+The backend includes Docker configuration for containerization.
 
+```
+docker compose up --build
+
+```
 ## Development Requirements
 - .NET Core SDK 8.0
 - Node.js 18+
